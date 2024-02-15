@@ -193,5 +193,3 @@ echo -e "${YELLOW}If the fonts do not show up, please ensure that nerd fonts is 
 EOF
 
 chmod u+x ${HOME}/change_oh_my_posh_appearance_zsh.sh
-
-exec zsh
