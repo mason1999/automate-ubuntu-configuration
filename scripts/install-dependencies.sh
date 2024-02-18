@@ -11,7 +11,7 @@ sudo apt-get install -y file
 sudo apt-get install -y iproute2
 sudo apt-get install -y xclip # For nvim to work
 sudo apt-get install -y unzip jq # For ohmyposh
-sudo curl -sL https://aka.ms/InstallAzureCLIDeb | bash # For AZ CLI
+sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash # For AZ CLI
 
 # For gh cli and it's dependencies
 type -p curl >/dev/null || (sudo apt-get update && sudo apt-get install curl -y) && \
