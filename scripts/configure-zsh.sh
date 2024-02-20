@@ -77,6 +77,8 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[OA" history-beginning-search-backward-end
 bindkey "^[OB" history-beginning-search-forward-end
 
+# Include pip in the PATH variable
+export PATH="${HOME}/.local/bin:${PATH}"
 EOF
 
 # Create a script which helps change the appearance
@@ -185,6 +187,8 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[OA" history-beginning-search-backward-end
 bindkey "^[OB" history-beginning-search-forward-end
 
+# Include pip in the PATH variable
+export PATH="${HOME}/.local/bin:${PATH}"
 EOL
 
 echo -e "${GREEN}To see the new configuration execute the command 'exec zsh'."

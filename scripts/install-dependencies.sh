@@ -40,3 +40,15 @@ gpg --no-default-keyring --keyring /usr/share/keyrings/hashicorp-archive-keyring
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list && \
 sudo apt-get update && \
 sudo apt-get install terraform
+
+# Install nodejs
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && \
+sudo apt-get install -y nodejs
+
+# Install pip for python
+curl -o script.py https://bootstrap.pypa.io/get-pip.py
+echo '#! /usr/bin/python3' > install-pip.py
+tail -n +2 script.py >> install-pip.py
+chmod u+x install-pip.py
+./install-pip.py
+rm -rf script.py install-pip.py
