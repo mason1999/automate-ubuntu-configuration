@@ -8,3 +8,4 @@ To automate your vanilla ubuntu operating system, simply run the `main.sh` file.
    ```
    sudo chmod 666 /var/run/docker.sock
    ```
+3. Ensure that wsl is trusted by vscode. You can do this by going to vscode > settings (UI) > security > Allowed UNCHosts > Add Item > `wsl.localhost`
