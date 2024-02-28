@@ -8,4 +8,8 @@ To automate your vanilla ubuntu operating system, simply run the `main.sh` file.
    ```
    sudo chmod 666 /var/run/docker.sock
    ```
-3. Ensure that wsl is trusted by vscode. You can do this by going to vscode > settings (UI) > security > Allowed UNCHosts > Add Item > `wsl.localhost`
+## Establish trust between wsl and vscode
+To establish trust between wsl and vscode...
+1. Open up powershell and go to your wsl distribution with `wsl --distribution <distribution name>`. Then go to the wsl folder path (e.g `cd \`)
+2. Then type in `code .`
+3. A prompt should come up to say trusted workspaces and you should just accept. If not you can do the following: command pallete (`ctrl+shift+p`) > workspace trust (`Manage workspace trust`) > `add folder`
