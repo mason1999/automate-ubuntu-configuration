@@ -67,5 +67,5 @@ pyenv install 3.11
 pyenv install 3.12
 pyenv global 3.12
 
-# Install pipenv
-pip install pipenv --user
+# Install pipenv-- must do it from absolute path because I'm setting everything up for zsh not bash. So pip isn't on the current path...
+${HOME}/.local/bin/pip install pipenv --user
