@@ -63,9 +63,5 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 
-pyenv install 3.11
-pyenv install 3.12
-pyenv global 3.12
-
 # Install pipenv-- must do it from absolute path because I'm setting everything up for zsh not bash. So pip isn't on the current path...
 ${HOME}/.local/bin/pip install pipenv --user
