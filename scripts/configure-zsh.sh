@@ -79,6 +79,11 @@ bindkey "^[OB" history-beginning-search-forward-end
 
 # Include pip in the PATH variable
 export PATH="${HOME}/.local/bin:${PATH}"
+
+# Include pyenv in the path variable
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 EOF
 
 # Create a script which helps change the appearance
@@ -189,6 +194,11 @@ bindkey "^[OB" history-beginning-search-forward-end
 
 # Include pip in the PATH variable
 export PATH="${HOME}/.local/bin:${PATH}"
+
+# Include pyenv in the path variable
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 EOL
 
 echo -e "${GREEN}To see the new configuration execute the command 'exec zsh'."
