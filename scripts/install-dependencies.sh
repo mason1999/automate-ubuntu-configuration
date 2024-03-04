@@ -52,3 +52,20 @@ tail -n +2 script.py >> install-pip.py
 chmod u+x install-pip.py
 ./install-pip.py
 rm -rf script.py install-pip.py
+
+# Install pyenv
+sudo apt-get update
+sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+curl https://pyenv.run | bash
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+
+pyenv install 3.11
+pyenv install 3.12
+pyenv global 3.12
+
+# Install pipenv
+pip install pipenv --user
