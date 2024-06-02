@@ -88,7 +88,7 @@ keymap.set("n", "<leader>nh", ":set nohls<CR>")
 keymap.set("n", "<leader>hh", ":set hls<CR>")
 
 -- Delete single character without copying into register
-keymap.set("n", "x", "_x")
+keymap.set("n", "x", '"_x')
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split windows vertically
