@@ -41,6 +41,13 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 sudo apt-get update && \
 sudo apt-get install terraform
 
+# Install terraform-docs
+curl -sSLo ./terraform-docs.tar.gz https://terraform-docs.io/dl/v0.18.0/terraform-docs-v0.18.0-$(uname)-amd64.tar.gz
+tar -xzf terraform-docs.tar.gz
+rm LICENSE README.md terraform-docs.tar.gz
+chmod a+x terraform-docs
+sudo mv ./terraform-docs /usr/local/bin
+
 # Install nodejs
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && \
 sudo apt-get install -y nodejs
