@@ -48,6 +48,12 @@ rm LICENSE README.md terraform-docs.tar.gz
 chmod a+x terraform-docs
 sudo mv ./terraform-docs /usr/local/bin
 
+# Install sqlcmd
+curl https://packages.microsoft.com/keys/microsoft.asc | tee /etc/apt/trusted.gpg.d/microsoft.asc
+sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)"
+sudo apt-get update
+sudo apt-get install sqlcmd
+
 # Install nodejs
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && \
 sudo apt-get install -y nodejs
